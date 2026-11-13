@@ -1,5 +1,5 @@
 | Task | Status | Details |
 |---|---|---|
-| Create git tag and GitHub Release | in_progress | Tag v1.0.0, upload macOS (.dmg, .zip) and Windows (.exe, .zip) binaries |
-| Clean all build caches and temporary files | pending | Remove dist/, build/, .venv/, .pytest_cache/, __pycache__ |
-| Verify workspace disk space and clean git state | pending | Ensure only clean sources remain and verify git status |
+| Create git tag and GitHub Release | done | Tag v1.0.0 created and assets uploaded to GitHub Release |
+| Clean all build caches and temporary files | done | Removed dist/, build/, .venv/, .pytest_cache/, __pycache__ (~2.5 GB freed) |
+| Verify workspace disk space and clean git state | done | Directory size reduced to 1.2 MB, git working tree clean |
