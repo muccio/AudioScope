@@ -76,8 +76,15 @@ def test_main_window_init_and_load(qapp):
         hex_tab._on_find_next()
         assert "Match found" in hex_tab.search_status.text()
 
+        if hex_tab.reader is not None:
+            hex_tab.reader.close()
+            hex_tab.reader = None
+
         window.close()
 
     finally:
+        if "hex_tab" in locals() and hex_tab.reader is not None:
+            hex_tab.reader.close()
+            hex_tab.reader = None
         if os.path.exists(tmp_path):
             os.remove(tmp_path)

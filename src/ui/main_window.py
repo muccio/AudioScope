@@ -501,3 +501,9 @@ class MainWindow(QMainWindow):
                 f.write("\n".join(txt_lines) + "\n")
 
         QMessageBox.information(self, "Export Complete", f"Report saved successfully to:\n{save_path}")
+
+    def closeEvent(self, event) -> None:
+        if hasattr(self, "tab_hex") and self.tab_hex is not None and self.tab_hex.reader is not None:
+            self.tab_hex.reader.close()
+            self.tab_hex.reader = None
+        super().closeEvent(event)
