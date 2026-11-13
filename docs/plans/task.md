@@ -1,6 +1,6 @@
 | Task | Status | Details |
 |---|---|---|
-| Configure Python interpreter detection for macOS build | done | Robust Python detection implemented in build_local.sh |
-| Setup virtual environment and dependencies | done | .venv created with Python 3.12, dependencies downloaded |
-| Execute macOS build pipeline | done | Generated dist/AudioScope.app and dist/AudioScope.dmg (85M) |
-| Verify macOS artifacts and bundle integrity | done | --check-build verified, 13/13 unit tests passed, codesign OK |
+| Create GitHub Actions Windows workflow | done | Created .github/workflows/build_windows.yml with Inno Setup and check-build |
+| Commit and push workflow to repository | in_progress | Git add, commit, and push to origin/main |
+| Trigger and monitor Windows build run | pending | Monitor GitHub Actions workflow run until completion |
+| Download and verify Windows artifacts | pending | Download AudioScope-windows-x64-setup and AudioScope-windows-x64-portable into dist/ |
